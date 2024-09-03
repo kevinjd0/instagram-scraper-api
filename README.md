@@ -85,7 +85,7 @@ curl "http://127.0.0.1:5000/get_profile_info?username=instagram"
 
 ## Deployment
 
-If you want to deploy this application using AWS Lambda with Zappa or Vercel or Render, follow the respective deployment guide. I'd recommend using Render for this api service (Use the Web Service Deployment)
+For detailed instructions on how to deploy this application on Render, please refer to the [Deployment Guide](./deployment.md).
 
 ## No API Key Required
 
