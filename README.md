@@ -8,6 +8,22 @@ This is a Flask-based API that allows you to retrieve basic information about an
 - Get follower count
 - Fetch full name of the Instagram user
 
+### Additional Capabilities
+
+Instaloader provides a rich set of features that allow you to fetch much more than just the basic information listed above. For example, you can:
+
+- **Download profile pictures (thumbnails) in various resolutions**
+- **Fetch a list of all posts made by the user**
+- **Retrieve the captions, hashtags, and comments associated with each post**
+- **Download stories, highlights, and IGTV videos (IGTV is now Deprecated) **
+- **Access geotags and other metadata related to posts**
+
+You can refer to the [Instaloader documentation](https://instaloader.github.io/) for a comprehensive list of options and capabilities. These can easily be adapted into your `app.py` to extend the functionality of this API.
+
+### Example:
+
+If you want to extend the API to fetch all posts from a user’s profile, you could modify `app.py` to include that functionality using Instaloader’s features. Similarly, you could add endpoints to download stories, depending on your needs.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
