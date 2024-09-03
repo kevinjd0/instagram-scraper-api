@@ -15,7 +15,7 @@ Instaloader provides a rich set of features that allow you to fetch much more th
 - **Download profile pictures (thumbnails) in various resolutions**
 - **Fetch a list of all posts made by the user**
 - **Retrieve the captions, hashtags, and comments associated with each post**
-- **Download stories, highlights, and IGTV videos (IGTV is now Deprecated) **
+- **Download stories, highlights, and IGTV videos (IGTV is now Deprecated)**
 - **Access geotags and other metadata related to posts**
 
 You can refer to the [Instaloader documentation](https://instaloader.github.io/) for a comprehensive list of options and capabilities. These can easily be adapted into your `app.py` to extend the functionality of this API.
