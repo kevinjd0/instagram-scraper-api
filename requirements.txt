@@ -2,4 +2,3 @@ Flask
 instaloader
 flask_cors
 requests
-threading
