@@ -7,6 +7,7 @@ app = Flask(__name__)
 # Initialize Instaloader
 L = instaloader.Instaloader()
 
+
 @app.route('/get_profile_info', methods=['GET'])
 def get_profile_info():
     username = request.args.get('username')
@@ -26,6 +27,32 @@ def get_profile_info():
 
     except Exception as e:
         return jsonify({"error": str(e)})
+
+# Updated route to get username, full name, followers, following, and post count
+
+
+@app.route('/get_profile_more_details', methods=['GET'])
+def get_profile_bio_posts():
+    username = request.args.get('username')
+    try:
+        # Download the profile
+        profile = instaloader.Profile.from_username(L.context, username)
+
+        # Prepare the data to return
+        data = {
+            "username": profile.username,
+            "full_name": profile.full_name,
+            "follower_count": profile.followers,
+            "following_count": profile.followees,
+            "post_count": profile.mediacount,
+            "profile_pic_url": profile.profile_pic_url,
+        }
+
+        return jsonify(data)
+
+    except Exception as e:
+        return jsonify({"error": str(e)})
+
 
 if __name__ == '__main__':
     # Bind to 0.0.0.0 and use the port provided by Render
