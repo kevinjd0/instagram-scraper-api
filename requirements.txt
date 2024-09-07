@@ -1,3 +1,7 @@
 Flask
 instaloader
 flask_cors
+requests
+os
+time
+threading
