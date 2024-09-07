@@ -1,11 +1,22 @@
 import os
 from flask import Flask, jsonify, request
 import instaloader
+from flask_cors import CORS
 
 app = Flask(__name__)
 
 # Initialize Instaloader
 L = instaloader.Instaloader()
+
+# Route to render welcome message
+
+# Enable CORS for all routes
+CORS(app)
+
+
+@app.route('/')
+def welcome():
+    return "Hello, welcome to Insta Scraper!"
 
 
 @app.route('/get_profile_info', methods=['GET'])
